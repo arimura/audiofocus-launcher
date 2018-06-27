@@ -15,7 +15,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp" android:text="stream"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+        android:onClick="clickStream"/>
     <TextView
         android:id="@+id/textViewAudioFocus"
         android:layout_width="wrap_content"
@@ -34,7 +35,8 @@
         android:layout_marginTop="16dp"
         android:ems="10" android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAudioFocus" tools:text="delay"/>
+        app:layout_constraintTop_toBottomOf="@+id/textViewAudioFocus" tools:text="delay"
+        android:onClick="clickAudioFocus"/>
     <Button
         android:id="@+id/buttonSchedule"
         android:layout_width="wrap_content"
