@@ -1,14 +1,20 @@
 package com.hormiga6.audiofocuslauncher;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.media.AudioManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -91,6 +97,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickSchedule(View view){
-
+        ScheduledExecutorService scheduledExecutorService =
+                Executors.newSingleThreadScheduledExecutor();
+        scheduledExecutorService.schedule(() -> {
+            System.out.print("hoge");
+            AudioManager am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+            int result = am.requestAudioFocus(new AudioManager.OnAudioFocusChangeListener() {
+                @Override
+                public void onAudioFocusChange(int focusChange) {
+                    Log.i(TAG, "audio focus change:" + focusChange);
+                }
+            }, streamVals[idxStream], audioFocuses[idxAudioFocus]);
+            Log.i(TAG, "audio focus request result:" + result);
+        }, Integer.parseInt(editTextDelay.getText().toString()), TimeUnit.SECONDS);
     }
 }

@@ -28,20 +28,20 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewStream"/>
     <EditText
         android:id="@+id/editTextDelay"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10" android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAudioFocus" tools:text="delay"
-        android:onClick="clickAudioFocus"/>
+        android:onClick="clickAudioFocus"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textViewAudioFocus"
+        tools:text="delay"/>
     <Button
         android:id="@+id/buttonSchedule"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp" android:layout_marginTop="16dp"
-        android:text="schedule" app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDelay"/>
+        android:onClick="clickSchedule" android:text="schedule"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/editTextDelay"/>
 </android.support.constraint.ConstraintLayout>
