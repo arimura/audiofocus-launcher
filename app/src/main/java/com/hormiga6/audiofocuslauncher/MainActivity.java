@@ -100,14 +100,11 @@ public class MainActivity extends AppCompatActivity {
         ScheduledExecutorService scheduledExecutorService =
                 Executors.newSingleThreadScheduledExecutor();
         scheduledExecutorService.schedule(() -> {
-            System.out.print("hoge");
             AudioManager am = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-            int result = am.requestAudioFocus(new AudioManager.OnAudioFocusChangeListener() {
-                @Override
-                public void onAudioFocusChange(int focusChange) {
-                    Log.i(TAG, "audio focus change:" + focusChange);
-                }
-            }, streamVals[idxStream], audioFocuses[idxAudioFocus]);
+            int result = am.requestAudioFocus(
+                    focusChange -> Log.i(TAG, "audio focus change:" + focusChange)
+                    , streamVals[idxStream]
+                    , audioFocuses[idxAudioFocus]);
             Log.i(TAG, "audio focus request result:" + result);
         }, Integer.parseInt(editTextDelay.getText().toString()), TimeUnit.SECONDS);
     }
