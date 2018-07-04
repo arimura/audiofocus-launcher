@@ -38,10 +38,19 @@
         app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textViewAudioFocus"
         tools:text="delay"/>
     <Button
-        android:id="@+id/buttonSchedule"
+        android:id="@+id/buttonAudioFocus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp" android:layout_marginTop="16dp"
-        android:onClick="clickScheduleAudioFocus" android:text="schedule"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/editTextDelay"/>
+        android:onClick="clickScheduleAudioFocus" android:text="schedule audiofocus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDelay"/>
+    <Button
+        android:id="@+id/buttonAbandon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" android:layout_marginTop="16dp"
+        android:text="schedule abandon" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAudioFocus"
+        android:onClick="clickScheduleAbandon"/>
 </android.support.constraint.ConstraintLayout>
