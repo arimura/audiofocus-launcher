@@ -35,7 +35,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10" android:inputType="textPersonName"
-        android:onClick="clickAudioFocus"
         app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textViewAudioFocus"
         tools:text="delay"/>
     <Button
@@ -43,6 +42,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp" android:layout_marginTop="16dp"
-        android:onClick="clickSchedule" android:text="schedule"
+        android:onClick="clickScheduleAudioFocus" android:text="schedule"
         app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/editTextDelay"/>
 </android.support.constraint.ConstraintLayout>

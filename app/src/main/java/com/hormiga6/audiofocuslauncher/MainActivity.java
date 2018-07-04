@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         builder.create().show();
     }
 
-    public void clickSchedule(View view){
+    public void clickScheduleAudioFocus(View view){
         ScheduledExecutorService scheduledExecutorService =
                 Executors.newSingleThreadScheduledExecutor();
         scheduledExecutorService.schedule(() -> {
