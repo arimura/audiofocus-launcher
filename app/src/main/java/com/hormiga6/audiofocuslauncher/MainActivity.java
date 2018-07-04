@@ -90,10 +90,11 @@ public class MainActivity extends AppCompatActivity {
     public void clickAudioFocus(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("AudioFocus")
-                .setItems(streamLabels, (dialog, which) -> {
+                .setItems(audioFocusLabels, (dialog, which) -> {
                     idxAudioFocus = which;
                     textViewAudioFocus.setText(audioFocusLabels[idxAudioFocus]);
         });
+        builder.create().show();
     }
 
     public void clickSchedule(View view){

@@ -25,7 +25,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp" android:text="type"
         android:textSize="24sp" app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewStream"/>
+        app:layout_constraintTop_toBottomOf="@+id/textViewStream"
+        android:onClick="clickAudioFocus"/>
     <EditText
         android:id="@+id/editTextDelay"
         android:layout_width="100dp"
